@@ -1,0 +1,91 @@
+<html>
+<head>
+<a href="index.html">Back</a>
+<script type="text/javascript" src="loadxml.js"></script>
+<link rel="stylesheet" href="europe.css" type="text/css" />
+<link href="europe2n.xsl"> 
+<link href="europe2p.xsl">
+ <link href="europe2c.xsl">
+ <link href="europe2a.xsl">
+</head>
+<body onLoad="init();">
+  <div id="data">
+  <script type="text/javascript">
+function init() {
+  source = loadXMLDoc("europe2.xml");
+  loadStyle("europe2.xsl", "data");
+  return true;
+}
+</script>
+  </div>
+</body>
+</html>
+<style>
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для кнопки "Back" */
+a {
+  display: inline-block;
+  background-color: #808080;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 0 0 20px 20px;
+  margin-top: 20px;
+}
+
+a:hover {
+  background-color: #666;
+}
+
+/* Стили для таблицы */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #444;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Стили для ячеек */
+td {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Стили для первой и последней ячейки */
+td:first-child, td:last-child {
+  font-weight: bold;
+}
+
+/* Стили для дополнительных XSL-файлов */
+link[href="europe2n.xsl"],
+link[href="europe2p.xsl"],
+link[href="europe2c.xsl"],
+link[href="europe2a.xsl"] {
+  display: none;
+}
+
+

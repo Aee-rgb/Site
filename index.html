@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIMCORE</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Общие стили */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    /* Стили для шапки */
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .header__logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .header__nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .header__nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .header__nav a:hover {
+      color: #ccc;
+    }
+
+
+
+    /* Стили для главного контента */
+    .main {
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 40px;
+    }
+
+    .main__title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .main__content {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .main__content p {
+      margin-bottom: 20px;
+    }
+
+    .main__links {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .main__link {
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .main__link:hover {
+      background-color: #555;
+    }
+
+    /* Стили для футера */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__logo">TIMCORE</div>
+      <nav class="header__nav">
+        <a href="europe.html">Europe Table</a>
+        <a href="1.html">First Page</a>
+        <a href="2.html">Second Page</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h1 class="main__title">Welcome to TIMCORE</h1>
+      <div class="main__content">
+        <p>TIMCORE is a platform dedicated to providing you with the latest news, insights, and resources in the world of technology, innovation, and entrepreneurship.</p>
+        <p>Explore our comprehensive guides, discover groundbreaking innovations, and connect with like-minded individuals who share your passion for the digital frontier.</p>
+        <p>Whether you're a seasoned tech enthusiast or just starting your journey, TIMCORE is your go-to destination for all things TECH.</p>
+      
+      <div class="photo-slider-container">
+  <div class="photo-slider">
+    <div class="photo-slide">
+      <img src="photo1.jpg" alt="Photo 1">
+    </div>
+    <div class="photo-slide">
+      <img src="photo2.jpg" alt="Photo 2">
+    </div>
+    <div class="photo-slide">
+      <img src="photo3.jpg" alt="Photo 3">
+      <!-- Добавьте больше фотографий по необходимости -->
+    </div>
+  </div>
+  <div class="photo-slider-controls">
+    <button class="prev-btn">&lt;</button>
+    <button class="next-btn">&gt;</button>
+  </div>
+</div>
+  <!--Стиль для кнопок-->
+ <style>
+.photo-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.photo-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.photo-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.photo-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.photo-slider-controls {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.prev-btn,
+.next-btn {
+  font-size: 24px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn {
+  position: absolute;
+  left: 20px; /* Adjust the left position as needed */
+}
+
+.next-btn {
+  position: absolute;
+  right: 60px; /* Adjust the right position as needed */
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #333333;
+}
+
+  </style>
+</head>
+<body>
+      
+     <!--Подключен ява скрипт для скролинга картинок -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.querySelector('.photo-slider');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3; // Adjust the scroll speed
+        slider.scrollLeft = scrollLeft - walk;
+      });
+
+      prevBtn.addEventListener('click', () => {
+        slider.scrollLeft -= slider.offsetWidth;
+      });
+
+      nextBtn.addEventListener('click', () => {
+        slider.scrollLeft += slider.offsetWidth;
+      });
+    });
+  </script>
+</body>
+</html>
+   
+      </div>
+      <div class="main__links">
+        <a href="europe.html" class="main__link">Europe Table</a>
+        <a href="1.html" class="main__link">First Page</a>
+        <a href="2.html" class="main__link">Second Page</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      &copy; 2024 TIMCORE. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
+
+<html>
+<head>
+  <title>Загрузочный экран</title>
+  <style>
+    /* Добавьте CSS-стили для загрузочного экрана */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loading-container {
+      text-align: center;
+    }
+
+    .computer-icon {
+      width: 100px;
+      height: 80px;
+      position: relative;
+      animation: rotate 2s linear infinite;
+    }
+
+    .screen {
+      width: 80px;
+      height: 50px;
+      background-color: #333;
+      border-radius: 5px;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    .body {
+      width: 100px;
+      height: 30px;
+      background-color: #666;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="loading-container">
+      <div class="computer-icon">
+        <div class="screen"></div>
+        <div class="body"></div>
+      </div>
+      <p>LOADING</p>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.display = 'none';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
